@@ -7,11 +7,11 @@ public:
 
         while (left < right) {
             int minHeight = std::min(height[left], height[right]);
-            int total = ((right - left) * minHeight);
+            //int total = ((right - left) * minHeight);
             //cout << "total " << total << endl;
             //cout << "right " << right << endl;
             //cout << "left " << left << endl;
-            maxWater = std::max(maxWater, total);
+            maxWater = std::max(maxWater, ((right - left) * minHeight));
 
             if (height[left] < height[right]) {
                 left++;
