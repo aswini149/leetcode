@@ -20,7 +20,7 @@ class Solution {
             } else {
                 stack.push(c);
             }
-            System.out.println(stack.toString());
+            //System.out.println(stack.toString());
 
         }
         return stack.isEmpty();
