@@ -1,16 +1,23 @@
 class Solution {
     public int maximumTop(int[] nums, int k) {
+        int n = nums.length;
+
+        if (n == 1) {
+            if (k % 2 == 0) {
+                return nums[0];
+            } else {
+                return -1;
+            }
+        }
+
+        if (k == 0) {
+            return nums[0];
+        }
         int max = -1;
-        int i = 0;
-        while (i < nums.length && i < k - 1) {
+        for (int i = 0; i < Math.min(n, k-1); i++) {
             max = Math.max(max, nums[i]);
-            i++;
         }
-        System.out.println("Max " + max);
-        System.out.println("k " + k);
-        if (i - 1 == k) {
-            return -1;
-        }
+
         return max;
     }
 }
