@@ -2,6 +2,9 @@ class Solution {
     public boolean canPlaceFlowers(int[] flowerbed, int n) {
         //boolean canPlant = false;
         //boolean isEvenOccupied = false;
+        if (n == 0) {
+            return true;
+        }
         for (int i = 0; i < flowerbed.length; i++) {
             if (flowerbed[i] == 0) {
                 boolean isRightEmpty = false;
